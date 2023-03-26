@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    
+    <title>Break Bricks</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container_logo">
+        <p id="my_logo">Sanji</p>
+      </div>
+      <div class="contact_menu">
+        <a href="http://facebook.com/ngheoketaupl"
+          ><i class="fa-brands fa-facebook"></i>Facebook</a
+        >
+        <a href="https://sieuquayks.wap.sh"
+          ><i class="fa-sharp fa-solid fa-envelope"></i> Website</a
+        >
+      </div>
+      <div class="container_title">
+        <div class="text">BREAK BRICKS</div>
+        <div class="effect">
+          <div class="content">BREAK BRICKS</div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu_start">
+          <button class="btn_menu" id="start">
+            <span data-title="Bắt đầu">Start</span>
+          </button>
+        </div>
+        <div class="menu_guide">
+          <button class="btn_menu" id="guide">
+            <span data-title="Hướng dẫn">Guide</span>
+          </button>
+        </div>
+        <div class="menu_history">
+          <button class="btn_menu" id="history_sum">
+            <span data-title="Lịch sử">History</span>
+          </button>
+        </div>
+      </div>
+      <div class="menu_level">
+        <i id="menu_level_close" class="fa-solid fa-arrow-left close_arrow"></i>
+        <button class="level" id="normal"><span>Normal</span></button>
+        <button class="level" id="difficult"><span>Difficult</span></button>
+        <button class="level" id="very_difficult">
+          <span> Very Difficult</span>
+        </button>
+      </div>
+      <div class="hour">10</div>
+      <canvas id="gameball" width="500" height="500"> </canvas>
+      <div class="information">
+        <i
+          id="canvas_level_close"
+          class="fa-solid fa-arrow-left close_arrow"
+        ></i>
+
+        <div class="user_infor">
+          <div class="infor">
+            <div class="score user_game">Score: 0</div>
+            <div class="time user_game">Time: 0s</div>
+          </div>
+
+          <div class="pause user_game">
+            <button class="btn_pause">Pause</button>
+          </div>
+          <div class="contactinfor">
+            <img id="img_infor" src="./assets/img/trong suot.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="result"></div>
+     <!-- <div class="btn_canvas rightbtn"><i class="fa-solid fa-arrow-right"></i></div> -->
+     <!-- <div class="btn_canvas leftbtn" ><i class="fa-solid fa-arrow-left"></i></div> -->
+      <div class="guide">
+        <img
+          id="imggameguide"
+          src="/break_brick/assets/img/guideimg.png"
+        width="500px"
+        />
+        <div class="guide_user">
+          <div class="imgdiv">
+            <i id="close_guide" class="fa-solid fa-xmark"></i>
+            <p>Game gồm 3 thành phần chính là</p>
+            <p style="color: red">
+              Bóng
+              <img style="margin-left: 50px" src="./assets/img/1.png" alt="" />
+            </p>
+
+            <p style="color: red">
+              Thanh chắn <img src="./assets/img/bar1.png" alt="" />
+            </p>
+            <p style="color: red">
+              Gạch
+              <img
+                style="margin-left: 51px"
+                src="./assets/img/brick1.png"
+                alt=""
+              />
+            </p>
+          </div>
+          <div class="guideend">
+            <p>
+              Nhiệm vụ của bạn là điều khiển thanh chắn sao cho không để bóng
+              chạm đáy cũng như khiến bóng chạm vào những viên gạch ở phía trên
+              để phá nó. Bạn sẽ
+              <strong style="color: blue">CHIẾN THẮNG</strong> khi mà tất cả
+              những viên gạch bị phá vỡ. Điểm sẽ được tính theo số viên gạch bạn
+              phá được nhân cho 100 và chia cho mốc thời gian lúc đó. Các level
+              khác nhau ở tốc độ phản xạ của bóng và độ rộng của thanh chắn. Vì
+              vậy độ khó càng cao sẽ đi kèm với điểm càng cao. Hãy cùng vượt qua
+              thử thách nào!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="historyTable">
+        <table id="historyTable_user">
+          <i id="close_history" class="fa-solid fa-arrow-left close_arrow"></i>
+          <tr id="historyTable_head">
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Result</th>
+            <th>Score</th>
+            <th>Time</th>
+            <th>level</th>
+          </tr>
+          <tr">
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="assets/javascript/main.js"></script>
+  </body>
+</html>
